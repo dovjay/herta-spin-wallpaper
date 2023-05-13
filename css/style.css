@@ -1,0 +1,77 @@
+.herta-image {
+  position: absolute;
+  bottom: 0;
+  left: 37vw;
+  animation: hertaWalk 2s infinite
+}
+
+#hertaImageLeft {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.hertaEntryLeft {
+  animation: entryLeft 1.2s;
+}
+
+.hertaEntryRight {
+  animation: entryRight 1.2s;
+}
+
+#hertaImageRight {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.text {
+  height: 80px;
+  overflow: hidden;
+}
+
+#hint {
+  color: #e4dff5;
+  transition: all .25s ease-out;
+}
+
+#catchprase {
+  transition: all .25s ease-out;
+  color: #5439A5;
+}
+
+body {
+  overflow: hidden;
+  background-color: white;
+}
+
+@keyframes hertaWalk {
+  0% { bottom: 0% }
+  25% { bottom: -5% }
+  100% { bottom: 0% }
+}
+
+@keyframes entryLeft {
+  0% { left: -100% }
+  15% { left: -20% }
+  75% { left: 0 }
+  100% { left: -100% }
+}
+
+@keyframes entryRight {
+  0% { right: -100% }
+  15% { right: -20% }
+  75% { right: 0 }
+  100% { right: -100% }
+}
